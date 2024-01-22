@@ -1,38 +1,38 @@
 /** Main section styles */
 html {
-	width: 100%;
-	height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 body {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 header {
-	font-size: 2em;
-	font-weight: bold;
-	padding-top: 1.1em;
-	padding-bottom: 1.1em;
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
 }
 
 footer {
-	height: 50px;
-	position: sticky;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
+  height: 50px;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
 }
 
 header,
 footer {
-	background-color: #004e98;
-	width: 100%;
-	text-align: center;
-	color: #e5dada;
+  background-color: #004e98;
+  width: 100%;
+  text-align: center;
+  color: #e5dada;
 }
 
 /**
@@ -40,61 +40,61 @@ footer {
 */
 
 main {
-	display: flex;
-	align-items: stretch;
-	flex: 1;
+  display: flex;
+  align-items: stretch;
+  flex: 1;
 }
 
 .addBookMenu {
-	background-color: #e5dada;
-	padding: 20px;
-	flex: 1;
+  background-color: #e5dada;
+  padding: 20px;
+  flex: 1;
 }
 
 /**
     FORM STYLE
 */
 .addBookMenu > form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 form > h2 {
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 form > div {
-	margin-top: 1.2em;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+  margin-top: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 label {
-	margin-bottom: 0.3em;
+  margin-bottom: 0.3em;
 }
 
 #read-checkbox {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	accent-color: #004e98;
-	margin-top: 1.2em;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  accent-color: #004e98;
+  margin-top: 1.2em;
+  align-items: center;
 }
 
 input[type="checkbox"] {
-	width: 1.5em;
-	height: 1.5em;
-	margin-right: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
 }
 
 form > button {
-	background-color: #3a6ea5;
-	padding: 5px;
-	border: 2px solid #004e98;
-	justify-content: center;
-	margin-top: 1em;
+  background-color: #3a6ea5;
+  padding: 5px;
+  border: 2px solid #004e98;
+  justify-content: center;
+  margin-top: 1em;
 }
 
 /**
@@ -108,82 +108,104 @@ input {
 */
 
 .libraryContainer {
-	flex: 4;
+  flex: 4;
 }
 
 .bookContainer {
 }
 
 .bookList {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 0.5em;
-	padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5em;
+  padding: 20px;
 }
 
 /**
 	CARD STYLE
 */
 .bookCard {
-	display: flex;
-	flex-direction: column;
-	background-color: #3a6ea5;
-	padding: 10px;
-	height: 150px;
-}
-
-.cardContent > h2 {
-	font-size: 1.5rem;
-	color: #840032;
-	font-weight: bolder;
-}
-
-.bookcard-name {
-	display: flex;
-	justify-content: space-between;
-	font-style: italic;
-	font-weight: bold;
-}
-
-.cardMenu {
-	flex: 1;
-	position: relative;
-	top: -10px;
-	left: -10px;
-	width: calc(100% + 20px);
-	color: white;
-	display: flex;
-	justify-content: flex-end;
-	box-sizing: border-box;
-}
-
-.cardMenu > button {
-	background-color: #840032;
-	padding: 0.2em;
-	padding-left: 0.6em;
-	padding-right: 0.6em;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #3a6ea5;
+  padding: 10px;
+  height: 150px;
 }
 
 .cardContent {
-	flex: 8;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContent > h2 {
+  font-size: 1.5rem;
+  color: #840032;
+  font-weight: bolder;
+}
+
+.bookcard-name {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cardMenu {
+  flex: 1;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.cardMenu > button {
+  background-color: #840032;
+  padding: 0.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  position: relative;
+}
+
+.cardContent-main {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hasReadContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleReadStatus {
+  background-color: #840032;
+  padding: 0.5em;
+  color: #e5dada;
+  position: relative;
+  right: -10px;
+  bottom: -10px;
 }
 /**
 	JAVASCRIPT UPDATING FUNCTIONS
 */
 .javascript-updating {
-	background-color: grey;
-	display: flex;
-	flex-direction: column;
-	margin-top: 5em;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
 }
 
 .javascript-updating > button {
-	background-color: red;
-	color: white;
-	margin: 0.5em;
-	padding: 1em;
+  background-color: red;
+  color: white;
+  margin: 0.5em;
+  padding: 1em;
 }
