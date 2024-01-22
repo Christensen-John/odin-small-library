@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Small Library</title>
+		<!-- Reset all elements default style -->
+		<link rel="stylesheet" href="resetStyle.css" />
+		<!-- Defined style-->
+		<link rel="stylesheet" href="style.css" />
+		<script src="smallLibraryApp.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>My Little Library</h1>
+		</header>
+		<main>
+			<div class="addBookMenu">
+				<form action="" method="post" id="newBookForm">
+					<h2>Book Information</h2>
+					<div>
+						<label for="bookTitle">Title:</label>
+						<input type="text" name="bookTitle" id="bookTitle" />
+					</div>
+					<div>
+						<label for="authorName">Author's Name:</label>
+						<input type="text" name="authorName" id="authorName" />
+					</div>
+					<div>
+						<label for="length">Length</label>
+						<input type="number" name="length" id="length" />
+					</div>
+					<div id="read-checkbox">
+						<input type="checkbox" name="hasRead" id="hasRead" />
+						<label for="hasRead">I've read this book!</label>
+					</div>
+					<button type="submit" id="newBookButton">Add book!</button>
+				</form>
+
+				<div class="javascript-updating">
+					<button onclick="createFillerBooks(3)">Add random books</button>
+					<button onclick="updateLibaryView()">Update Library</button>
+				</div>
+			</div>
+			<div class="libraryContainer">
+				<!-- <div class="spaceFiller"></div> -->
+				<div class="libraryMenu"></div>
+				<div class="bookContainer">
+					<ul class="bookList" id="bookListContainer"></ul>
+				</div>
+			</div>
+		</main>
+		<footer><p class="attribution">@John Christensen 2024</p></footer>
+	</body>
+</html>
