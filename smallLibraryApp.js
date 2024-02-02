@@ -3,51 +3,115 @@ const newBookButton = document.getElementById("newBookButton");
 const newBookForm = document.getElementById("newBookForm");
 
 //	**BOOK CLASS**	//
-//CONSTRUCTOR//
-function Book(title, authFirst, authInit, authLast, length, read) {
-  this.title = title;
-  this.authorFirstName = authFirst;
-  this.authorInitial = authInit;
-  this.authorLastName = authLast;
-  this.length = length;
-  this.read = read ? read : false;
+class Book {
+  #title;
+  #authorFirstName = "";
+  #authorInitial = "";
+  #authorLastName = "";
+  #length = 0;
+  #read = false;
+
+  constructor(title, authFirst, authInit, authLast, length, read) {
+    this.#title = title;
+    this.#authorFirstName = authFirst;
+    this.#authorInitial = authInit;
+    this.#authorLastName = authLast;
+    this.#length = length;
+    this.#read = read ? read : false;
+  }
+
+  //ACCESSORS
+  get title() {
+    return this.#title;
+  }
+
+  get authorFirstName() {
+    return this.#authorFirstName;
+  }
+
+  get authorInitial() {
+    return this.#authorInitial;
+  }
+
+  get authorLastName() {
+    return this.#authorLastName;
+  }
+
+  get authorFullName() {
+    return `${this.#authorFirstName} ${this.#authorInitial} ${
+      this.#authorLastName
+    }`;
+  }
+
+  get length() {
+    return this.#length;
+  }
+
+  get read() {
+    return this.#read;
+  }
+
+  //MUTATORS
+  set authorFirstName(nm) {
+    this.#authorFirstName = nm;
+  }
+
+  set authorInitial(nm) {
+    this.#authorInitial = nm;
+  }
+
+  set authorLastName(nm) {
+    this.#authorLastName = nm;
+  }
+
+  set read(status) {
+    this.#read = status;
+  }
+
+  set title(ttl) {
+    this.#title = ttl;
+  }
+
+  set length(len) {
+    this.#length = len;
+  }
 }
 
 //ACCESSORS//
-Book.prototype.getTitle = function () {
-  return this.title;
-};
+// Book.prototype.getTitle = function () {
+//   return this.title;
+// };
 
-Book.prototype.getAuthor = function () {
-  return `${this.authorFirstName} ${this.authorInitial} ${this.authorLastName}`;
-};
+// Book.prototype.getAuthor = function () {
+//   return `${this.authorFirstName} ${this.authorInitial} ${this.authorLastName}`;
+// };
 
-Book.prototype.getLength = function () {
-  return this.length;
-};
+// Book.prototype.getLength = function () {
+//   return this.length;
+// };
 
-Book.prototype.getReadStatus = function () {
-  return this.read;
-};
+// Book.prototype.getReadStatus = function () {
+//   return this.read;
+// };
 
 //MUTATORS//
-Book.prototype.setTitle = function (newTitle) {
-  this.title = newTitle;
-};
+// Book.prototype.setTitle = function (newTitle) {
+//   this.title = newTitle;
+// };
 
-Book.prototype.setAuthor = function (newAuthFirst, newAuthInit, newAuthLast) {
-  this.authorFirstName = newAuthFirst;
-  this.authorInitial = newAuthInit;
-  this.authorLastName = newAuthLast;
-};
+// Book.prototype.setAuthor = function (newAuthFirst, newAuthInit, newAuthLast) {
+//   this.authorFirstName = newAuthFirst;
+//   this.authorInitial = newAuthInit;
+//   this.authorLastName = newAuthLast;
+// };
 
-Book.prototype.setLength = function (newLength) {
-  this.length = newLength;
-};
+// Book.prototype.setLength = function (newLength) {
+//   this.length = newLength;
+// };
 
-Book.prototype.setReadStatus = function (newReadStatus) {
-  this.read = newReadStatus;
-};
+// Book.prototype.setReadStatus = function (newReadStatus) {
+//   this.read = newReadStatus;
+// };
 
 //	**LIBRARY APP FUNCTIONS**	//
 /**
